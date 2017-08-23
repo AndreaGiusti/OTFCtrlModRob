@@ -3,13 +3,12 @@
 %        
 %
 % Syntax:  
-%   NE_mod(q,dq,dqA,dqd,ddq,KinPar,DynPar,g)
+%   NE_mod(q,dq,dqA,ddq,KinPar,DynPar,g)
 %
 % Inputs: 
 %    q      -> vector of generalized joint positions
 %    dq     -> vector of generalized joint velocities
 %    dqA    -> vector of auxiliary generalized joint velocities
-%    dqd    -> vector of desired joint velocities
 %    ddq    -> vector of generalized joint accelerations
 %    KinPar -> structure containing kin pars: KinPar.B, KinPar.DHext, 
 %              KinPar.NJ
@@ -35,7 +34,7 @@
 %
 % Author:       Andrea Giusti
 % Written:      14-12-2015
-% Last update:  05-03-2017
+% Last update:  23-08-2017
 % Last revision:---
 
 %------------- BEGIN CODE --------------
@@ -45,7 +44,7 @@ function [tao_out] = NE_mod(q,dq,dqA,ddq,KinPar,DynPar,g)
 % This function performs the modified recursive NE algorithm
 
 DH_ext = KinPar.DHext;
-B      = KinPar.B;
+B      = KinPar.B(1:3,1:3);
 NJ = KinPar.NJ;
 JT = DH_ext(:,7);
 
