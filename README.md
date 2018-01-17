@@ -1,6 +1,10 @@
 # OTFCtrlModRob
 
-MATLAB code related to the following papers
+MATLAB code related to the dissertation
+
+A. Giusti, "Automatic Design of Controllers for Modular Reconfigurable Robot Manipulators", 2018, under review,
+
+and to the following papers
 
 A. Giusti and M. Althoff, "On-The-Fly Control Design of Modular Robot
 Manipulators", Transactions on Control Systems Technology, submitted.
